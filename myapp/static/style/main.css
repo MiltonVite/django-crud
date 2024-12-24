@@ -1,0 +1,41 @@
+body {
+    background-color: black;
+    color: whitesmoke;
+}
+
+.navar {
+    background: #404040;
+    padding: 6px 0;
+}
+
+.navar ul {
+    display: flex;
+    justify-content: space-around;
+}
+
+.navar ul li {
+    list-style: none;
+
+}
+
+.navar ul li a {
+    color: whitesmoke;
+    text-decoration: none;
+}
+
+.navar ul li a:hover {
+    color: aquamarine;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px 0;
+}
+
+.card {
+    background: whitesmoke;
+    padding: 20px;
+    margin-bottom: 20px;
+    color: black;
+}

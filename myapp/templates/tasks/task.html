@@ -1,0 +1,25 @@
+{% extends 'layouts/base.html' %}
+{%block content%}
+<!-- Cometario de jinja -->
+{#Comentario en jinja#}
+<h1>TASK</h1>
+{% for task in tasks %}
+<!-- <h1>{{ task.title }} </h1> -->
+
+<h1>{%if task.done == False %} 🕑 {%else%} ✅ {%endif%} {{task.title}}</h1>
+
+<!-- {% if task.done == False%}
+    <p>Tarea pendiente</p>
+    {% else %}
+    <p>Tarea completada</p>
+    {% endif %} -->
+<p>{{task.description}}</p>
+<p>Porjecto: {{task.project.name}}</p>
+<button>
+    delete
+</button>
+<button>
+    ✅ Done
+</button>
+{% endfor %}
+{%endblock%}
