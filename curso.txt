@@ -1,2 +1,0 @@
-username: aldair_suarez
-password: 123456789

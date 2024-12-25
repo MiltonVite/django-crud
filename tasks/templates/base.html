@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Django crud aplicacion</title>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li>
+                <a href="/">Home</a>
+            </li>
+
+            {% if user.is_authenticated %}
+            <li>
+                <a href="/logout">cierra</a>
+            </li>
+            <li>
+                <a href="/task">task pendientes</a>
+            </li>
+            <li>
+                <a href="/task/create">create task</a>
+            </li>
+            <li>
+                <a href="/task/complete">task completed</a>
+            </li>
+            {% else %}
+            <li>
+                <a href="/singup">Registrar</a>
+            </li>
+            <li>
+                <a href="/signin">inicia</a>
+            </li>
+            {% endif %}
+
+        </ul>
+    </nav>
+
+    {% block content %}
+    {% endblock %}
+</body>
+
+</html>
